@@ -1,0 +1,35 @@
+Quartus Prime Archive log --	D:/ece385/git_repo/exp6/lab6_toplevel_tmp_archive.qarlog
+
+Archive:	D:/ece385/git_repo/exp6/lab6_toplevel_tmp_archive.qar
+Date:		Fri Feb 22 14:50:17 2019
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/ece385/git_repo/exp6/HexDriver.sv
+D:/ece385/git_repo/exp6/ISDU.sv
+D:/ece385/git_repo/exp6/Mem2IO.sv
+D:/ece385/git_repo/exp6/PC.sv
+D:/ece385/git_repo/exp6/PCmux.sv
+D:/ece385/git_repo/exp6/SLC3_2.sv
+D:/ece385/git_repo/exp6/assignment_defaults.qdf
+D:/ece385/git_repo/exp6/datapath.sv
+D:/ece385/git_repo/exp6/lab6_toplevel.qpf
+D:/ece385/git_repo/exp6/lab6_toplevel.qsf
+D:/ece385/git_repo/exp6/lab6_toplevel.sv
+D:/ece385/git_repo/exp6/memory_contents.sv
+D:/ece385/git_repo/exp6/mux_21.sv
+D:/ece385/git_repo/exp6/reg_16.sv
+D:/ece385/git_repo/exp6/slc3.sv
+D:/ece385/git_repo/exp6/test_memory.sv
+D:/ece385/git_repo/exp6/testbench.sv
+D:/ece385/git_repo/exp6/tristate.sv
+	======= Total: 18 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Fri Feb 22 14:50:18 2019
+Source archive file:	D:/ece385/git_repo/exp6/lab6_toplevel_tmp_archive.qar
+Archive was extracted into	D:/ece385/git_repo/exp6_week1backup/
+		 - successfully.

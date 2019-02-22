@@ -1,0 +1,359 @@
+Analysis & Elaboration report for lab6_toplevel
+Fri Feb 22 14:50:16 2019
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: slc3:my_slc|tristate:tr0
+  5. Parameter Settings for User Entity Instance: test_memory:my_test_memory
+  6. Parameter Settings for User Entity Instance: test_memory:my_test_memory|memory_parser:parser
+  7. Analysis & Elaboration Settings
+  8. Port Connectivity Checks: "slc3:my_slc|PCmux:mux_for_PC"
+  9. Port Connectivity Checks: "slc3:my_slc|ISDU:state_controller"
+ 10. Port Connectivity Checks: "slc3:my_slc|Mem2IO:memory_subsystem"
+ 11. Port Connectivity Checks: "slc3:my_slc|datapath:d0"
+ 12. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                   ;
++------------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status      ; Successful - Fri Feb 22 14:50:16 2019       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; lab6_toplevel                               ;
+; Top-level Entity Name              ; lab6_toplevel                               ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|tristate:tr0 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; N              ; 16    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test_memory:my_test_memory ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; size           ; 256   ; Signed Integer                                 ;
+; init_external  ; 0     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test_memory:my_test_memory|memory_parser:parser ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; size           ; 256   ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                            ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; lab6_toplevel      ; lab6_toplevel      ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|PCmux:mux_for_PC" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; IN_2 ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|ISDU:state_controller"                                                      ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; BEN      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; LD_BEN   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; LD_CC    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; LD_REG   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; LD_LED   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; DRMUX    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; SR1MUX   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; SR2MUX   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ADDR1MUX ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ADDR2MUX ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ALUK     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|Mem2IO:memory_subsystem"                                                        ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; ADDR[19..16] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; HEX0         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; HEX1         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; HEX2         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; HEX3         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; ALU  ; Input ; Info     ; Stuck at GND              ;
++------+-------+----------+---------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
+    Info (12023): Found entity 1: datapath File: D:/ece385/git_repo/exp6/datapath.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
+    Info (12023): Found entity 1: testbench File: D:/ece385/git_repo/exp6/testbench.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pcmux.sv
+    Info (12023): Found entity 1: PCmux File: D:/ece385/git_repo/exp6/PCmux.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pc.sv
+    Info (12023): Found entity 1: PC File: D:/ece385/git_repo/exp6/PC.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
+    Info (12023): Found entity 1: HexDriver File: D:/ece385/git_repo/exp6/HexDriver.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file reg_16.sv
+    Info (12023): Found entity 1: reg_16 File: D:/ece385/git_repo/exp6/reg_16.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tristate.sv
+    Info (12023): Found entity 1: tristate File: D:/ece385/git_repo/exp6/tristate.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file test_memory.sv
+    Info (12023): Found entity 1: test_memory File: D:/ece385/git_repo/exp6/test_memory.sv Line: 22
+Info (12021): Found 1 design units, including 0 entities, in source file slc3_2.sv
+    Info (12022): Found design unit 1: SLC3_2 (SystemVerilog) File: D:/ece385/git_repo/exp6/SLC3_2.sv Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file slc3.sv
+    Info (12023): Found entity 1: slc3 File: D:/ece385/git_repo/exp6/slc3.sv Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file memory_contents.sv
+    Info (12023): Found entity 1: memory_parser File: D:/ece385/git_repo/exp6/memory_contents.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file mem2io.sv
+    Info (12023): Found entity 1: Mem2IO File: D:/ece385/git_repo/exp6/Mem2IO.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file lab6_toplevel.sv
+    Info (12023): Found entity 1: lab6_toplevel File: D:/ece385/git_repo/exp6/lab6_toplevel.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file isdu.sv
+    Info (12023): Found entity 1: ISDU File: D:/ece385/git_repo/exp6/ISDU.sv Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file mux_21.sv
+    Info (12023): Found entity 1: mux_21 File: D:/ece385/git_repo/exp6/mux_21.sv Line: 1
+Info (12127): Elaborating entity "lab6_toplevel" for the top level hierarchy
+Info (12128): Elaborating entity "slc3" for hierarchy "slc3:my_slc" File: D:/ece385/git_repo/exp6/lab6_toplevel.sv Line: 94
+Warning (10030): Net "ALU" at slc3.sv(48) has no driver or initial value, using a default initial value '0' File: D:/ece385/git_repo/exp6/slc3.sv Line: 48
+Warning (10030): Net "BEN" at slc3.sv(40) has no driver or initial value, using a default initial value '0' File: D:/ece385/git_repo/exp6/slc3.sv Line: 40
+Warning (10034): Output port "LED" at slc3.sv(22) has no driver File: D:/ece385/git_repo/exp6/slc3.sv Line: 22
+Info (12128): Elaborating entity "HexDriver" for hierarchy "slc3:my_slc|HexDriver:hex_driver3" File: D:/ece385/git_repo/exp6/slc3.sv Line: 55
+Info (12128): Elaborating entity "datapath" for hierarchy "slc3:my_slc|datapath:d0" File: D:/ece385/git_repo/exp6/slc3.sv Line: 80
+Warning (10240): Verilog HDL Always Construct warning at datapath.sv(5): inferring latch(es) for variable "Data_Out", which holds its previous value in one or more paths through the always construct File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[0]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[1]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[2]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[3]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[4]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[5]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[6]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[7]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[8]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[9]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[10]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[11]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[12]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[13]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[14]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[15]" at datapath.sv(5) File: D:/ece385/git_repo/exp6/datapath.sv Line: 5
+Info (12128): Elaborating entity "Mem2IO" for hierarchy "slc3:my_slc|Mem2IO:memory_subsystem" File: D:/ece385/git_repo/exp6/slc3.sv Line: 88
+Info (12128): Elaborating entity "tristate" for hierarchy "slc3:my_slc|tristate:tr0" File: D:/ece385/git_repo/exp6/slc3.sv Line: 93
+Info (12128): Elaborating entity "ISDU" for hierarchy "slc3:my_slc|ISDU:state_controller" File: D:/ece385/git_repo/exp6/slc3.sv Line: 100
+Info (12128): Elaborating entity "PCmux" for hierarchy "slc3:my_slc|PCmux:mux_for_PC" File: D:/ece385/git_repo/exp6/slc3.sv Line: 109
+Warning (10240): Verilog HDL Always Construct warning at PCmux.sv(5): inferring latch(es) for variable "Data_Out", which holds its previous value in one or more paths through the always construct File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[0]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[1]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[2]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[3]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[4]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[5]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[6]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[7]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[8]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[9]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[10]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[11]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[12]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[13]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[14]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (10041): Inferred latch for "Data_Out[15]" at PCmux.sv(5) File: D:/ece385/git_repo/exp6/PCmux.sv Line: 5
+Info (12128): Elaborating entity "reg_16" for hierarchy "slc3:my_slc|reg_16:PCREG" File: D:/ece385/git_repo/exp6/slc3.sv Line: 115
+Info (12128): Elaborating entity "mux_21" for hierarchy "slc3:my_slc|mux_21:MDRMUX" File: D:/ece385/git_repo/exp6/slc3.sv Line: 130
+Warning (10240): Verilog HDL Always Construct warning at mux_21.sv(5): inferring latch(es) for variable "Data_Out", which holds its previous value in one or more paths through the always construct File: D:/ece385/git_repo/exp6/mux_21.sv Line: 5
+Info (12128): Elaborating entity "test_memory" for hierarchy "test_memory:my_test_memory" File: D:/ece385/git_repo/exp6/lab6_toplevel.sv Line: 98
+Warning (10036): Verilog HDL or VHDL warning at test_memory.sv(42): object "actual_address" assigned a value but never read File: D:/ece385/git_repo/exp6/test_memory.sv Line: 42
+Info (12128): Elaborating entity "memory_parser" for hierarchy "test_memory:my_test_memory|memory_parser:parser" File: D:/ece385/git_repo/exp6/test_memory.sv Line: 48
+Warning (12158): Entity "memory_parser" contains only dangling pins File: D:/ece385/git_repo/exp6/test_memory.sv Line: 48
+Warning (20013): Ignored 24 assignments for entity "lab4_adders_toplevel" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity lab4_adders_toplevel -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity lab4_adders_toplevel -section_id Top was ignored
+
+
