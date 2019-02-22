@@ -1,0 +1,27 @@
+Quartus Prime Archive log --	D:/mine/UIUC/ECE385/Lab5/exp5/8-bit-multiplier_tmp_archive.qarlog
+
+Archive:	D:/mine/UIUC/ECE385/Lab5/exp5/8-bit-multiplier_tmp_archive.qar
+Date:		Fri Feb 15 13:59:43 2019
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/mine/UIUC/ECE385/Lab5/exp5/8-bit-multiplier.qpf
+D:/mine/UIUC/ECE385/Lab5/exp5/8-bit-multiplier.qsf
+D:/mine/UIUC/ECE385/Lab5/exp5/8-bit-multiplier.sv
+D:/mine/UIUC/ECE385/Lab5/exp5/D_flipflop.sv
+D:/mine/UIUC/ECE385/Lab5/exp5/control.sv
+D:/mine/UIUC/ECE385/Lab5/exp5/hexdriver.sv
+D:/mine/UIUC/ECE385/Lab5/exp5/lab5_multiplier_toplevel.sv
+D:/mine/UIUC/ECE385/Lab5/exp5/reg_8.sv
+D:/mine/UIUC/ECE385/Lab5/exp5/testbench.sv
+c:/intelfpga_lite/18.0/quartus/bin64/assignment_defaults.qdf
+	======= Total: 10 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Fri Feb 15 13:59:48 2019
+Source archive file:	D:/mine/UIUC/ECE385/Lab5/exp5/8-bit-multiplier_tmp_archive.qar
+Archive was extracted into	F:/Hadi/ABB/qianluc2 lchen111/
+		 - successfully.

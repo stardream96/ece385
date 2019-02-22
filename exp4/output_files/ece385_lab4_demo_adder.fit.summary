@@ -1,0 +1,10 @@
+I/O Assignment Analysis Status : Successful - Fri Feb 08 08:36:35 2019
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : ece385_lab4_demo_adder
+Top-level Entity Name : lab4_adders_toplevel
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total pins : 93 / 529 ( 18 % )
+Total virtual pins : 0
+Total PLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,14 @@
+module sign_editor
+(
+	input logic  [7:0] A,
+	input logic  [7:0] B,
+	output logic [7:0] Aout,
+	output logic [7:0] Bout
+
+);
+	assign Aout=A;
+	assign Bout=B;
+	assign Aout[7]=A[7]&(~B[7])
+	assign Bout[7]=A[7]^(B[7])
+
+endmodule 
