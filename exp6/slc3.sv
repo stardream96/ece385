@@ -99,12 +99,40 @@ ISDU state_controller(
     .Mem_CE(CE), .Mem_UB(UB), .Mem_LB(LB), .Mem_OE(OE), .Mem_WE(WE)
 );
 
+mux_21 ADDR1mux(
+	.SELECT(ADDR1MUX),
+	.IN_0(PC),
+	.IN_1(SR1_Out),//REGISTER FILE
+	.Data_Out(ADDR1_Out)
+);
+
+SEXT SEXTunit_ADDR2(
+	.*,
+	.IN(IR[10:0])
+);
+
+mux_41 ADDR2mux(
+	.SELECT(ADDR2MUX),
+	.IN_00(SEXT11),
+	.IN_01(SEXT9),
+	.IN_10(SEXT6),
+	.IN_11(16'h0000),
+	.Data_Out(ADDR2_Out)
+);
+
+ALU PCALU (
+	.A(ADDR2_Out)
+	.B(ADDR1_Out)
+	.Sel(ALUK)
+	.Out(PCALU_Out)
+);
+
 PCmux mux_for_PC(
 				.*,
 				.PCMUX(PCMUX),
 				.IN_0(PC + 16'h0001),
-				.IN_1(Bus_Data),
-				.IN_2(16'h0000),
+				.IN_1(PCALU_Out),
+				.IN_2(Bus_Data),
 				.Data_Out(PCtemp)
 );
 reg_16 PCREG(
@@ -123,7 +151,7 @@ reg_16 MARREG(
 
 mux_21 MDRMUX(
 				.*,
-				.SLK(MIO_EN),
+				.SELECT(MIO_EN),
 				.IN_0(Bus_Data),
 				.IN_1(MDR_In),
 				.Data_Out(MDRtemp)
