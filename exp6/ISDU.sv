@@ -137,6 +137,7 @@ module ISDU (   input logic         Clk,
 					4'b0001 : 
 						Next_state = S_01;
 <<<<<<< HEAD
+<<<<<<< HEAD
 				
 					4'b0101 : //AND
 						next_state = S_05;
@@ -161,6 +162,9 @@ module ISDU (   input logic         Clk,
 				
 					4'b1101 : //PAUSE
 						next_state = S_13;	
+=======
+
+>>>>>>> parent of 87561b2... partially finished
 =======
 
 >>>>>>> parent of 87561b2... partially finished
@@ -213,6 +217,7 @@ module ISDU (   input logic         Clk,
 					// incomplete...
 				end
 <<<<<<< HEAD
+<<<<<<< HEAD
 			S_05 : //AND
 			
 				Next_state = S_18;
@@ -256,6 +261,9 @@ module ISDU (   input logic         Clk,
 				Next_state = S_18;
 			S_13 ://PAUSE, need modify
 				Next_state = S_18;
+=======
+
+>>>>>>> parent of 87561b2... partially finished
 =======
 
 >>>>>>> parent of 87561b2... partially finished

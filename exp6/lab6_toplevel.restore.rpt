@@ -1,6 +1,10 @@
 Restore Archived Project report for lab6_toplevel
 <<<<<<< HEAD
+<<<<<<< HEAD
 Fri Mar 01 01:46:57 2019
+=======
+Fri Feb 22 14:49:29 2019
+>>>>>>> parent of 87561b2... partially finished
 =======
 Fri Feb 22 14:49:29 2019
 >>>>>>> parent of 87561b2... partially finished
@@ -41,7 +45,11 @@ refer to the applicable agreement for further details.
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
 <<<<<<< HEAD
+<<<<<<< HEAD
 ; Restore Archived Project Status ; Successful - Fri Mar 01 01:46:57 2019 ;
+=======
+; Restore Archived Project Status ; Successful - Fri Feb 22 14:49:29 2019 ;
+>>>>>>> parent of 87561b2... partially finished
 =======
 ; Restore Archived Project Status ; Successful - Fri Feb 22 14:49:29 2019 ;
 >>>>>>> parent of 87561b2... partially finished
@@ -71,8 +79,11 @@ Info: Generated report 'lab6_toplevel.restore.rpt'
 ; PC.sv                   ;
 ; PCmux.sv                ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ; RegFile.sv              ;
 ; SEXT.sv                 ;
+=======
+>>>>>>> parent of 87561b2... partially finished
 =======
 >>>>>>> parent of 87561b2... partially finished
 ; SLC3_2.sv               ;

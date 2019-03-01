@@ -102,6 +102,7 @@ ISDU state_controller(
 );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 mux_21 ADDR1mux(
 	.SELECT(ADDR1MUX),
 	.IN_0(PC),
@@ -130,6 +131,8 @@ ALU PCALU (
 	.Out(PCALU_Out)
 );
 
+=======
+>>>>>>> parent of 87561b2... partially finished
 =======
 >>>>>>> parent of 87561b2... partially finished
 PCmux mux_for_PC(
