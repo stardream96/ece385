@@ -28,8 +28,6 @@ module slc3(
 //self declared
 logic [15:0] Bus_Data;	
 logic [15:0] MDRtemp;
-logic [2:0] SR1temp, DRtemp;
-logic [15:0] SR2temp, SR1_Out, SR2_Out;
 
 // Declaration of push button active high signals
 logic Reset_ah, Continue_ah, Run_ah;
@@ -101,8 +99,6 @@ ISDU state_controller(
     .Mem_CE(CE), .Mem_UB(UB), .Mem_LB(LB), .Mem_OE(OE), .Mem_WE(WE)
 );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 mux_21 ADDR1mux(
 	.SELECT(ADDR1MUX),
 	.IN_0(PC),
@@ -125,25 +121,20 @@ mux_41 ADDR2mux(
 );
 
 ALU PCALU (
-	.A(ADDR2_Out),
-	.B(ADDR1_Out),
-	.Sel(2b'00),
+	.A(ADDR2_Out)
+	.B(ADDR1_Out)
+	.Sel(ALUK)
 	.Out(PCALU_Out)
 );
 
-=======
->>>>>>> parent of 87561b2... partially finished
-=======
->>>>>>> parent of 87561b2... partially finished
 PCmux mux_for_PC(
 				.*,
 				.PCMUX(PCMUX),
 				.IN_0(PC + 16'h0001),
-				.IN_1(Bus_Data),
-				.IN_2(16'h0000),
+				.IN_1(PCALU_Out),
+				.IN_2(Bus_Data),
 				.Data_Out(PCtemp)
 );
-
 reg_16 PCREG(
 				.*,
 				.LD(LD_PC),
@@ -160,7 +151,7 @@ reg_16 MARREG(
 
 mux_21 MDRMUX(
 				.*,
-				.SLK(MIO_EN),
+				.SELECT(MIO_EN),
 				.IN_0(Bus_Data),
 				.IN_1(MDR_In),
 				.Data_Out(MDRtemp)
@@ -179,43 +170,5 @@ reg_16 IRREG(
 				.D(Bus_Data),
 				.Data_Out(IR)
 );
-
-mux3_21 DRMUX(
-				.SELECT(DRMUX),
-				.IN_0(IR[11:9]),
-				.IN_1(3'b111),
-				.Data_Out(DRtemp)
-);
-
-mux3_21 SR1MUX(
-				.SELECT(SR1MUX),
-				.IN_0(IR[11:9]),
-				.IN_1(IR[8:6]),
-				.Data_Out(SR1temp)
-);
-			
-mux_21 SR2MUX(
-				.SELECT(SR2MUX),
-				.IN_0(SR2_OUT),
-				.IN_1({11{IR[4]}},IR[4:0]}),
-				.Data_Out(SR2temp)
-);
-
-RegFile RegisterF(
-				.*,
-				.DR(DRtemp),
-				.SR1(SR1temp),
-				.SR2(IR[2:0]),
-				.Data_In(Bus_Data)
-);
-				
-ALU REGALU (
-	.A(SR1_Out)
-	.B(SR2_Out)
-	.Sel(ALUK)
-	.Out(ALU)
-);
-
-NZP 
 
 endmodule
