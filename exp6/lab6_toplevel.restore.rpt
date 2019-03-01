@@ -1,13 +1,5 @@
 Restore Archived Project report for lab6_toplevel
-<<<<<<< HEAD
-<<<<<<< HEAD
-Fri Mar 01 01:46:57 2019
-=======
-Fri Feb 22 14:49:29 2019
->>>>>>> parent of 87561b2... partially finished
-=======
-Fri Feb 22 14:49:29 2019
->>>>>>> parent of 87561b2... partially finished
+Fri Mar 01 02:12:05 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -44,17 +36,9 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-<<<<<<< HEAD
-<<<<<<< HEAD
-; Restore Archived Project Status ; Successful - Fri Mar 01 01:46:57 2019 ;
-=======
-; Restore Archived Project Status ; Successful - Fri Feb 22 14:49:29 2019 ;
->>>>>>> parent of 87561b2... partially finished
-=======
-; Restore Archived Project Status ; Successful - Fri Feb 22 14:49:29 2019 ;
->>>>>>> parent of 87561b2... partially finished
+; Restore Archived Project Status ; Successful - Fri Mar 01 02:12:05 2019 ;
 ; Revision Name                   ; lab6_toplevel                         ;
-; Top-level Entity Name           ; lab6_toplevel                         ;
+; Top-level Entity Name           ; mux_21                                ;
 ; Family                          ; Cyclone IV E                          ;
 +---------------------------------+---------------------------------------+
 
@@ -62,7 +46,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'D:/mine/UIUC/ECE385/Lab6/exp6/lab6_toplevel_tmp_archive.qar' into the 'D:/mine/UIUC/ECE385/Git/exp6' directory
+Info: Successfully restored 'D:/ece385/git_repo/exp6/lab6_toplevel_tmp_archive.qar' into the 'D:/ece385/git_repo/exp6' directory
 Info: Generated report 'lab6_toplevel.restore.rpt'
 
 
@@ -72,34 +56,27 @@ Info: Generated report 'lab6_toplevel.restore.rpt'
 ; File Name               ;
 +-------------------------+
 ; qar_info.json           ;
+; ALU.sv                  ;
 ; HexDriver.sv            ;
 ; ISDU.sv                 ;
 ; Mem2IO.sv               ;
-; NZP.sv                  ;
 ; PC.sv                   ;
 ; PCmux.sv                ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-; RegFile.sv              ;
 ; SEXT.sv                 ;
-=======
->>>>>>> parent of 87561b2... partially finished
-=======
->>>>>>> parent of 87561b2... partially finished
 ; SLC3_2.sv               ;
+; assignment_defaults.qdf ;
 ; datapath.sv             ;
 ; lab6_toplevel.qpf       ;
 ; lab6_toplevel.qsf       ;
 ; lab6_toplevel.sv        ;
 ; memory_contents.sv      ;
-; mux3_21.sv              ;
 ; mux_21.sv               ;
+; mux_41.sv               ;
 ; reg_16.sv               ;
 ; slc3.sv                 ;
 ; test_memory.sv          ;
 ; testbench.sv            ;
 ; tristate.sv             ;
-; assignment_defaults.qdf ;
 +-------------------------+
 
 
