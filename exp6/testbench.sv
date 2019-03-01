@@ -54,30 +54,11 @@ Continue = 1;
 
 //#2 Data = 16'hACAC;\
 
-#2 S = 16'b0000000000000001;
+#2 S = 16'h0014;
 
 #2 Run = 0;
 #2 Run = 1;
-#2 Continue = 0;
-#2 Continue = 1;
-#2 Continue = 0;
-#2 Continue = 1;
-#2 Continue = 0;
-#2 Continue = 1;
-#2 Continue = 0;
-#2 Continue = 1;
-#2 Continue = 0;
-#2 Continue = 1;
-#2 Continue = 0;
-#2 Continue = 1;
-#2 Continue = 0;
-#2 Continue = 1;
-#2 Continue = 0;
-#2 Continue = 1;
-#2 Continue = 0;
-#2 Continue = 1;
-#2 Continue = 0;
-#2 Continue = 1;
+#20 
 
 #22;
 

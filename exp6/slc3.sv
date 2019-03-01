@@ -28,6 +28,9 @@ module slc3(
 //self declared
 logic [15:0] Bus_Data;	
 logic [15:0] MDRtemp;
+logic [2:0] SR1temp, DRtemp;
+logic [15:0] SR2temp, SR1_Out, SR2_Out;
+logic BENtemp;
 
 // Declaration of push button active high signals
 logic Reset_ah, Continue_ah, Run_ah;
@@ -75,6 +78,10 @@ HexDriver hex_driver4 (PC[3:0], HEX4);
 assign ADDR = { 4'b00, MAR }; //Note, our external SRAM chip is 1Mx16, but address space is only 64Kx16
 assign MIO_EN = ~OE;	
 
+logic [15:0] ADDR1_Out, ADDR2_Out;
+logic [15:0] SEXT11,SEXT9,SEXT6;
+logic [15:0] PCALU_Out;
+logic [2:1] SR2_OUT;
 // You need to make your own datapath module and connect everything to the datapath
 // Be careful about whether Reset is active high or low
 datapath d0 (.*, .Data_Out(Bus_Data));
@@ -108,7 +115,7 @@ mux_21 ADDR1mux(
 
 SEXT SEXTunit_ADDR2(
 	.*,
-	.IN(IR[10:0])
+	.In(IR[10:0])
 );
 
 mux_41 ADDR2mux(
@@ -117,13 +124,13 @@ mux_41 ADDR2mux(
 	.IN_01(SEXT9),
 	.IN_10(SEXT6),
 	.IN_11(16'h0000),
-	.Data_Out(ADDR2_Out)
+	.Out(ADDR2_Out)
 );
 
 ALU PCALU (
-	.A(ADDR2_Out)
-	.B(ADDR1_Out)
-	.Sel(ALUK)
+	.A(ADDR2_Out),
+	.B(ADDR1_Out),
+	.Sel(2'b00),
 	.Out(PCALU_Out)
 );
 
@@ -135,6 +142,7 @@ PCmux mux_for_PC(
 				.IN_2(Bus_Data),
 				.Data_Out(PCtemp)
 );
+
 reg_16 PCREG(
 				.*,
 				.LD(LD_PC),
@@ -149,7 +157,7 @@ reg_16 MARREG(
 				.Data_Out(MAR)
 );
 
-mux_21 MDRMUX(
+mux_21 MDRmux(
 				.*,
 				.SELECT(MIO_EN),
 				.IN_0(Bus_Data),
@@ -170,5 +178,54 @@ reg_16 IRREG(
 				.D(Bus_Data),
 				.Data_Out(IR)
 );
+
+mux3_21 DRmux(
+				.SELECT(DRMUX),
+				.IN_0(IR[11:9]),
+				.IN_1(3'b111),
+				.Data_Out(DRtemp)
+);
+
+mux3_21 SR1mux(
+				.SELECT(SR1MUX),
+				.IN_0(IR[11:9]),
+				.IN_1(IR[8:6]),
+				.Data_Out(SR1temp)
+);
+			
+mux_21 SR2mux(
+				.SELECT(SR2MUX),
+				.IN_0(SR2_OUT),
+				.IN_1({{11{IR[4]}},IR[4:0]}),
+				.Data_Out(SR2temp)
+);
+
+RegFile RegisterF(
+				.*,
+				.DR(DRtemp),
+				.SR1(SR1temp),
+				.SR2(IR[2:0]),
+				.Data_In(Bus_Data)
+);
+				
+ALU alu (
+	.A(SR1_Out),
+	.B(SR2_Out),
+	.Sel(ALUK),
+	.Out(ALU)
+);
+
+NZP nzp(
+	.*,
+	.Data_Out(BENtemp)
+);
+
+reg_1 ben(
+	.*,
+	.LD(LD_BEN),
+	.D(BENtemp),
+	.Data_Out(BEN)
+);
+	
 
 endmodule

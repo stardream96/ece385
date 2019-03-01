@@ -1,15 +1,15 @@
 module SEXT(
-	.input logic [10:0] IN,
-	.output logic [15:0] SEXT11,
-	.output logic [15:0] SEXT9,
-	.output logic [15:0] SEXT6,
+	input logic[10:0] In,
+	output logic [15:0] SEXT11,
+	output logic [15:0] SEXT9,
+	output logic [15:0] SEXT6
 );
 
 	always_comb
 	begin
-		SEXT11[10:0] = IN[10:0];
-		SEXT9[8:0] = IN[8:0];
-		SEXT6[5:0] = IN[5:0];
+		SEXT11[10:0] = In[10:0];
+		SEXT9[8:0] = In[8:0];
+		SEXT6[5:0] = In[5:0];
 		if (In[10])
 			SEXT11[15:11] = 5'b11111;
 		else

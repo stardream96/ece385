@@ -1,4 +1,4 @@
-module mux_4(input logic [15:0] IN_00,IN_01,IN_10,IN_11,
+module mux_41(input logic [15:0] IN_00,IN_01,IN_10,IN_11,
 					input logic [1:0] SELECT,
 					output logic [15:0] Out);
 				

@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY mux_21
+set_global_assignment -name TOP_LEVEL_ENTITY lab6_toplevel
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:12:58  FEBRUARY 21, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
@@ -582,23 +582,8 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench -sect
 set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id testbench
-set_global_assignment -name SYSTEMVERILOG_FILE datapath.sv
-set_global_assignment -name SYSTEMVERILOG_FILE testbench.sv
-set_global_assignment -name SYSTEMVERILOG_FILE PCmux.sv
-set_global_assignment -name SYSTEMVERILOG_FILE PC.sv
-set_global_assignment -name SYSTEMVERILOG_FILE HexDriver.sv
-set_global_assignment -name SYSTEMVERILOG_FILE reg_16.sv
-set_global_assignment -name SYSTEMVERILOG_FILE tristate.sv
-set_global_assignment -name SYSTEMVERILOG_FILE test_memory.sv
-set_global_assignment -name SYSTEMVERILOG_FILE SLC3_2.sv
-set_global_assignment -name SYSTEMVERILOG_FILE slc3.sv
-set_global_assignment -name SYSTEMVERILOG_FILE memory_contents.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Mem2IO.sv
-set_global_assignment -name SYSTEMVERILOG_FILE lab6_toplevel.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ISDU.sv
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE testbench.sv -section_id testbench
-set_global_assignment -name SYSTEMVERILOG_FILE mux_21.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity lab4_adders_toplevel -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity lab4_adders_toplevel -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -entity lab4_adders_toplevel -section_id Top
@@ -677,10 +662,31 @@ set_location_assignment PIN_AC11 -to ADDR[16]
 set_location_assignment PIN_AB9 -to ADDR[17]
 set_location_assignment PIN_AB8 -to ADDR[18]
 set_location_assignment PIN_T8 -to ADDR[19]
-set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux_41.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE reg_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RegFile.sv
+set_global_assignment -name SYSTEMVERILOG_FILE NZP.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux3_21.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux21.sv
+set_global_assignment -name SYSTEMVERILOG_FILE IR.sv
+set_global_assignment -name SYSTEMVERILOG_FILE datapath.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbench.sv
+set_global_assignment -name SYSTEMVERILOG_FILE PCmux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE PC.sv
+set_global_assignment -name SYSTEMVERILOG_FILE HexDriver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE reg_16.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tristate.sv
+set_global_assignment -name SYSTEMVERILOG_FILE test_memory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SLC3_2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE slc3.sv
+set_global_assignment -name SYSTEMVERILOG_FILE memory_contents.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Mem2IO.sv
+set_global_assignment -name SYSTEMVERILOG_FILE lab6_toplevel.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ISDU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux_21.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux_41.sv
 set_global_assignment -name SYSTEMVERILOG_FILE SEXT.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
