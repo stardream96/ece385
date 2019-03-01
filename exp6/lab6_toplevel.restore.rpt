@@ -1,5 +1,5 @@
 Restore Archived Project report for lab6_toplevel
-Tue Feb 26 14:37:09 2019
+Fri Mar 01 01:46:57 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Tue Feb 26 14:37:09 2019 ;
+; Restore Archived Project Status ; Successful - Fri Mar 01 01:46:57 2019 ;
 ; Revision Name                   ; lab6_toplevel                         ;
 ; Top-level Entity Name           ; mux_21                                ;
 ; Family                          ; Cyclone IV E                          ;
@@ -46,7 +46,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'D:/ece385/exp6/lab6_toplevel_tmp_archive.qar' into the 'D:/ece385/git_repo/exp6' directory
+Info: Successfully restored 'D:/mine/UIUC/ECE385/Lab6/exp6/lab6_toplevel_tmp_archive.qar' into the 'D:/mine/UIUC/ECE385/Git/exp6' directory
 Info: Generated report 'lab6_toplevel.restore.rpt'
 
 
@@ -60,8 +60,10 @@ Info: Generated report 'lab6_toplevel.restore.rpt'
 ; HexDriver.sv            ;
 ; ISDU.sv                 ;
 ; Mem2IO.sv               ;
+; NZP.sv                  ;
 ; PC.sv                   ;
 ; PCmux.sv                ;
+; RegFile.sv              ;
 ; SEXT.sv                 ;
 ; SLC3_2.sv               ;
 ; datapath.sv             ;
@@ -69,6 +71,7 @@ Info: Generated report 'lab6_toplevel.restore.rpt'
 ; lab6_toplevel.qsf       ;
 ; lab6_toplevel.sv        ;
 ; memory_contents.sv      ;
+; mux3_21.sv              ;
 ; mux_21.sv               ;
 ; mux_41.sv               ;
 ; reg_16.sv               ;

@@ -1,0 +1,237 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/mine/UIUC/ECE385/Git/exp5/simulation/modelsim
+vcontrol
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1550873992
+!i10b 1
+!s100 =9O=l3i4kliaJiRe4IR@z1
+I4f8^D?X2TBaXDgobO`mNN2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 control_sv_unit
+S1
+R0
+Z4 w1550866730
+8D:/mine/UIUC/ECE385/Git/exp5/control.sv
+FD:/mine/UIUC/ECE385/Git/exp5/control.sv
+L0 1
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1550873991.000000
+!s107 D:/mine/UIUC/ECE385/Git/exp5/control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/mine/UIUC/ECE385/Git/exp5|D:/mine/UIUC/ECE385/Git/exp5/control.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+D:/mine/UIUC/ECE385/Git/exp5
+Z8 tCvgOpt 0
+vD_flipflop
+R1
+R2
+!i10b 1
+!s100 _Uf2fS:o?Zb=A9Ac3F`M60
+IDC2;LJ3KJ@J=hLX2n>F>D3
+R3
+!s105 D_flipflop_sv_unit
+S1
+R0
+R4
+8D:/mine/UIUC/ECE385/Git/exp5/D_flipflop.sv
+FD:/mine/UIUC/ECE385/Git/exp5/D_flipflop.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z9 !s108 1550873992.000000
+!s107 D:/mine/UIUC/ECE385/Git/exp5/D_flipflop.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/mine/UIUC/ECE385/Git/exp5|D:/mine/UIUC/ECE385/Git/exp5/D_flipflop.sv|
+!i113 1
+R6
+R7
+R8
+n@d_flipflop
+veight_bit_ra_sub
+R1
+Z10 !s110 1550873991
+!i10b 1
+!s100 SRzM=XJW>A]QboVbh5CHM3
+I^hb<69g1Nn4QnY>j2d3`C2
+R3
+Z11 !s105 _82dbit2dmultiplier_sv_unit
+S1
+R0
+R4
+Z12 8D:/mine/UIUC/ECE385/Git/exp5/8-bit-multiplier.sv
+Z13 FD:/mine/UIUC/ECE385/Git/exp5/8-bit-multiplier.sv
+L0 32
+R5
+r1
+!s85 0
+31
+Z14 !s108 1550873990.000000
+Z15 !s107 D:/mine/UIUC/ECE385/Git/exp5/8-bit-multiplier.sv|
+Z16 !s90 -reportprogress|300|-sv|-work|work|+incdir+D:/mine/UIUC/ECE385/Git/exp5|D:/mine/UIUC/ECE385/Git/exp5/8-bit-multiplier.sv|
+!i113 1
+R6
+R7
+R8
+vfour_bit_ra
+R1
+R10
+!i10b 1
+!s100 g2fA=njW^LX3`ln9@i;7G1
+Im^8^g;:7FI8CO<3HbHS^a2
+R3
+R11
+S1
+R0
+R4
+R12
+R13
+L0 52
+R5
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vfull_adder
+R1
+R10
+!i10b 1
+!s100 8TIMG;I^=CnPF75kd4P`B3
+I?AJaOaEo6N<]7iWAKlj4]0
+R3
+R11
+S1
+R0
+R4
+R12
+R13
+L0 70
+R5
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vHexDriver
+R1
+R2
+!i10b 1
+!s100 =R2i165HPJgkY;aA[TRmG3
+I^Bo?>3SS[eY[hC:CYYbkj1
+R3
+!s105 hexdriver_sv_unit
+S1
+R0
+R4
+8D:/mine/UIUC/ECE385/Git/exp5/hexdriver.sv
+FD:/mine/UIUC/ECE385/Git/exp5/hexdriver.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R9
+!s107 D:/mine/UIUC/ECE385/Git/exp5/hexdriver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/mine/UIUC/ECE385/Git/exp5|D:/mine/UIUC/ECE385/Git/exp5/hexdriver.sv|
+!i113 1
+R6
+R7
+R8
+n@hex@driver
+vlab5_multiplier_toplevel
+R1
+R2
+!i10b 1
+!s100 lGS?i1i@F:SmLO^9DNf5P1
+I[9W64LP=eNUTS??17f>9I0
+R3
+!s105 lab5_multiplier_toplevel_sv_unit
+S1
+R0
+R4
+8D:/mine/UIUC/ECE385/Git/exp5/lab5_multiplier_toplevel.sv
+FD:/mine/UIUC/ECE385/Git/exp5/lab5_multiplier_toplevel.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R9
+!s107 D:/mine/UIUC/ECE385/Git/exp5/lab5_multiplier_toplevel.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/mine/UIUC/ECE385/Git/exp5|D:/mine/UIUC/ECE385/Git/exp5/lab5_multiplier_toplevel.sv|
+!i113 1
+R6
+R7
+R8
+vreg_8
+R1
+R2
+!i10b 1
+!s100 AXDzj?_?eZ4hKcKof@=bm2
+IFC@<@e13]OanY0bn=zKez0
+R3
+!s105 reg_8_sv_unit
+S1
+R0
+R4
+8D:/mine/UIUC/ECE385/Git/exp5/reg_8.sv
+FD:/mine/UIUC/ECE385/Git/exp5/reg_8.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R9
+!s107 D:/mine/UIUC/ECE385/Git/exp5/reg_8.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/mine/UIUC/ECE385/Git/exp5|D:/mine/UIUC/ECE385/Git/exp5/reg_8.sv|
+!i113 1
+R6
+R7
+R8
+vtestbench
+R1
+R2
+!i10b 1
+!s100 @d`VL_ID>f25F4GaKS@Kl3
+IcM]GH8[BENY<dg<RX7eiA0
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1550873750
+8D:/mine/UIUC/ECE385/Git/exp5/testbench.sv
+FD:/mine/UIUC/ECE385/Git/exp5/testbench.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R9
+!s107 D:/mine/UIUC/ECE385/Git/exp5/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/mine/UIUC/ECE385/Git/exp5|D:/mine/UIUC/ECE385/Git/exp5/testbench.sv|
+!i113 1
+R6
+R7
+R8

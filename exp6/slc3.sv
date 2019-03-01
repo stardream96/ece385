@@ -28,6 +28,8 @@ module slc3(
 //self declared
 logic [15:0] Bus_Data;	
 logic [15:0] MDRtemp;
+logic [2:0] SR1temp, DRtemp;
+logic [15:0] SR2temp, SR1_Out, SR2_Out;
 
 // Declaration of push button active high signals
 logic Reset_ah, Continue_ah, Run_ah;
@@ -121,9 +123,9 @@ mux_41 ADDR2mux(
 );
 
 ALU PCALU (
-	.A(ADDR2_Out)
-	.B(ADDR1_Out)
-	.Sel(ALUK)
+	.A(ADDR2_Out),
+	.B(ADDR1_Out),
+	.Sel(2b'00),
 	.Out(PCALU_Out)
 );
 
@@ -135,6 +137,7 @@ PCmux mux_for_PC(
 				.IN_2(Bus_Data),
 				.Data_Out(PCtemp)
 );
+
 reg_16 PCREG(
 				.*,
 				.LD(LD_PC),
@@ -170,5 +173,43 @@ reg_16 IRREG(
 				.D(Bus_Data),
 				.Data_Out(IR)
 );
+
+mux3_21 DRMUX(
+				.SELECT(DRMUX),
+				.IN_0(IR[11:9]),
+				.IN_1(3'b111),
+				.Data_Out(DRtemp)
+);
+
+mux3_21 SR1MUX(
+				.SELECT(SR1MUX),
+				.IN_0(IR[11:9]),
+				.IN_1(IR[8:6]),
+				.Data_Out(SR1temp)
+);
+			
+mux_21 SR2MUX(
+				.SELECT(SR2MUX),
+				.IN_0(SR2_OUT),
+				.IN_1({11{IR[4]}},IR[4:0]}),
+				.Data_Out(SR2temp)
+);
+
+RegFile RegisterF(
+				.*,
+				.DR(DRtemp),
+				.SR1(SR1temp),
+				.SR2(IR[2:0]),
+				.Data_In(Bus_Data)
+);
+				
+ALU REGALU (
+	.A(SR1_Out)
+	.B(SR2_Out)
+	.Sel(ALUK)
+	.Out(ALU)
+);
+
+NZP 
 
 endmodule

@@ -42,10 +42,10 @@ Run   = 1;
 #2 Reset = 1;
 
 #2 LoadB_ClearA = 0;
-	S = 8'hFF;
+	S = 8'h07;
 	
 #4 LoadB_ClearA = 1;
-	S = 8'hFA;
+	S = 8'hC5;
 
 #6 Run = 0;
 

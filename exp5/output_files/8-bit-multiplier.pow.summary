@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Fri Feb 22 17:03:14 2019
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : 8-bit-multiplier
+Top-level Entity Name : lab5_multiplier_toplevel
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Power Models : Final
+Total Thermal Power Dissipation : 143.00 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 98.50 mW
+I/O Thermal Power Dissipation : 44.49 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

@@ -137,34 +137,34 @@ module ISDU (   input logic         Clk,
 				case (Opcode)
 					4'b0001 : //ADD
 						Next_state = S_01;
-				case (Opcode)
+				
 					4'b0101 : //AND
 						next_state = S_05;
-				case (Opcode)
+				
 					4'b1001 : //NOT
 						next_state = S_09;
-				case (Opcode)
+				
 					4'b0000 : //BR
 						next_state = S_00;
-				case (Opcode)
+				
 					4'b1100 : //JMP
 						next_state = S_12;
-				case (Opcode)
+				
 					4'b0100 : //JSR
 						next_state = S_04;
-				case (Opcode)
+				
 					4'b0110 : //LDR
 						next_state = S_06;
-				case (Opcode)
+				
 					4'b0111 : //STR
 						next_state = S_07;
-				case (Opcode)
+				
 					4'b1101 : //PAUSE
 						next_state = S_13;	
 					// You need to finish the rest of opcodes.....
 
 					default : 
-						Next_state = S_18;
+						Next_state = PauseIR1;
 				endcase
 			S_01 : //ADD
 				Next_state = S_18;
@@ -243,6 +243,7 @@ module ISDU (   input logic         Clk,
 					// incomplete...
 				end
 			S_05 : //AND
+			
 				Next_state = S_18;
 			S_09 : //NOT
 				Next_state = S_18;
