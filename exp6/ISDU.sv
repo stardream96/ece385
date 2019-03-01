@@ -14,8 +14,7 @@
 //    Revised 02-13-2017
 //    Spring 2017 Distribution
 //------------------------------------------------------------------------------
-`include "SLC3_2.sv"
-import SLC3_2::*;
+
 
 module ISDU (   input logic         Clk, 
 									Reset,
@@ -120,7 +119,7 @@ module ISDU (   input logic         Clk,
 			S_33_2 : 
 				Next_state = S_35;
 			S_35 : 
-				Next_state = s_32;
+				Next_state = PauseIR1;
 			// PauseIR1 and PauseIR2 are only for Week 1 such that TAs can see 
 			// the values in IR.
 			PauseIR1 : 
@@ -135,8 +134,9 @@ module ISDU (   input logic         Clk,
 					Next_state = S_18;
 			S_32 : 
 				case (Opcode)
-					4'b0001 : //ADD
+					4'b0001 : 
 						Next_state = S_01;
+<<<<<<< HEAD
 				
 					4'b0101 : //AND
 						next_state = S_05;
@@ -161,45 +161,15 @@ module ISDU (   input logic         Clk,
 				
 					4'b1101 : //PAUSE
 						next_state = S_13;	
+=======
+
+>>>>>>> parent of 87561b2... partially finished
 					// You need to finish the rest of opcodes.....
 
 					default : 
 						Next_state = PauseIR1;
 				endcase
-			S_01 : //ADD
-				Next_state = S_18;
-			S_05 : //AND
-				Next_state = S_18;
-			S_09 : //NOT
-				Next_state = S_18;
-			S_00 : //BR
-				if IR11
-					Next_state = S_22;
-				else
-					Next_state = S_18;
-			S_22 : //in BR,PC<-PC+off9
-				Next_state = S_18;
-			S_12 : //JMP
-				Next_state = S_18;
-			S_04 : //JSR
-				Next_state = S_21;
-			S_21 : //in JSR, PC<-PC+off11
-				Next_state = S_18;
-			S_20 : //in JSR, PC<-BaseR
-				Next_state = S_18;
-			S_06 : //MAR<-B+off6
-				Next_state = S_25;
-			S_25 : //MDR<-M[MAR]
-				Next_state = S_27;
-			S_27 : //DR<-MDR, set CC
-				Next_state = S_18;
-			S_07 : //STR
-				Next_state = S_23;
-			S_23 : //MDR<-SR
-				Next_state = S_16;
-			S_16 : //M[MAR]<-MDR
-				Next_state = S_18;
-			S_13 ://PAUSE, need modify
+			S_01 : 
 				Next_state = S_18;
 
 			// You need to finish the rest of states.....
@@ -242,6 +212,7 @@ module ISDU (   input logic         Clk,
 					LD_REG = 1'b1;
 					// incomplete...
 				end
+<<<<<<< HEAD
 			S_05 : //AND
 			
 				Next_state = S_18;
@@ -285,6 +256,9 @@ module ISDU (   input logic         Clk,
 				Next_state = S_18;
 			S_13 ://PAUSE, need modify
 				Next_state = S_18;
+=======
+
+>>>>>>> parent of 87561b2... partially finished
 			// You need to finish the rest of states.....
 
 			default : ;

@@ -1,5 +1,9 @@
 Restore Archived Project report for lab6_toplevel
+<<<<<<< HEAD
 Fri Mar 01 01:46:57 2019
+=======
+Fri Feb 22 14:49:29 2019
+>>>>>>> parent of 87561b2... partially finished
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -36,9 +40,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
+<<<<<<< HEAD
 ; Restore Archived Project Status ; Successful - Fri Mar 01 01:46:57 2019 ;
+=======
+; Restore Archived Project Status ; Successful - Fri Feb 22 14:49:29 2019 ;
+>>>>>>> parent of 87561b2... partially finished
 ; Revision Name                   ; lab6_toplevel                         ;
-; Top-level Entity Name           ; mux_21                                ;
+; Top-level Entity Name           ; lab6_toplevel                         ;
 ; Family                          ; Cyclone IV E                          ;
 +---------------------------------+---------------------------------------+
 
@@ -56,15 +64,17 @@ Info: Generated report 'lab6_toplevel.restore.rpt'
 ; File Name               ;
 +-------------------------+
 ; qar_info.json           ;
-; ALU.sv                  ;
 ; HexDriver.sv            ;
 ; ISDU.sv                 ;
 ; Mem2IO.sv               ;
 ; NZP.sv                  ;
 ; PC.sv                   ;
 ; PCmux.sv                ;
+<<<<<<< HEAD
 ; RegFile.sv              ;
 ; SEXT.sv                 ;
+=======
+>>>>>>> parent of 87561b2... partially finished
 ; SLC3_2.sv               ;
 ; datapath.sv             ;
 ; lab6_toplevel.qpf       ;
@@ -73,7 +83,6 @@ Info: Generated report 'lab6_toplevel.restore.rpt'
 ; memory_contents.sv      ;
 ; mux3_21.sv              ;
 ; mux_21.sv               ;
-; mux_41.sv               ;
 ; reg_16.sv               ;
 ; slc3.sv                 ;
 ; test_memory.sv          ;

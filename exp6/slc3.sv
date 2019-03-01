@@ -101,6 +101,7 @@ ISDU state_controller(
     .Mem_CE(CE), .Mem_UB(UB), .Mem_LB(LB), .Mem_OE(OE), .Mem_WE(WE)
 );
 
+<<<<<<< HEAD
 mux_21 ADDR1mux(
 	.SELECT(ADDR1MUX),
 	.IN_0(PC),
@@ -129,12 +130,14 @@ ALU PCALU (
 	.Out(PCALU_Out)
 );
 
+=======
+>>>>>>> parent of 87561b2... partially finished
 PCmux mux_for_PC(
 				.*,
 				.PCMUX(PCMUX),
 				.IN_0(PC + 16'h0001),
-				.IN_1(PCALU_Out),
-				.IN_2(Bus_Data),
+				.IN_1(Bus_Data),
+				.IN_2(16'h0000),
 				.Data_Out(PCtemp)
 );
 
@@ -154,7 +157,7 @@ reg_16 MARREG(
 
 mux_21 MDRMUX(
 				.*,
-				.SELECT(MIO_EN),
+				.SLK(MIO_EN),
 				.IN_0(Bus_Data),
 				.IN_1(MDR_In),
 				.Data_Out(MDRtemp)
