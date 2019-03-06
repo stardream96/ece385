@@ -1,8 +1,8 @@
 module datapath (input logic GatePC, GateMDR, GateALU, GateMARMUX, 
-						input logic [15:0] MAR, MDR, ALU, PC, 
+						input logic [15:0] PCALU_Out, MDR, ALU, PC, 
 						output logic [15:0] Data_Out);
 
-	always_ff @ (GatePC or GateMDR or GateALU or GateMARMUX or MAR or MDR or ALU or PC)
+	always_ff @ (GatePC or GateMDR or GateALU or GateMARMUX or PCALU_Out or MDR or ALU or PC)
 	begin
 		if(GatePC == 1)
 			Data_Out <= PC;
@@ -11,6 +11,6 @@ module datapath (input logic GatePC, GateMDR, GateALU, GateMARMUX,
 		if(GateALU == 1)
 			Data_Out <= ALU;	
 		if(GateMARMUX == 1)
-			Data_Out <= MAR;	
+			Data_Out <= PCALU_Out;	
 	end
 endmodule

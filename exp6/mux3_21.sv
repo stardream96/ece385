@@ -2,12 +2,11 @@ module mux3_21(input logic [2:0] IN_0, IN_1,
 				  input logic SELECT,
 				  output logic [2:0] Data_Out);
 
-	always_ff @ (IN_0 or IN_1 or SELECT)
-	begin
-		if(SELECT == 0)
-			Data_Out <= IN_0;
-		if(SELECT == 1)
-			Data_Out <= IN_1;
-	
+	always_comb
+	begin			
+		case(SELECT)
+			1'b0: Data_Out = IN_0;
+			1'b1: Data_Out = IN_1;
+		endcase
 	end
 endmodule

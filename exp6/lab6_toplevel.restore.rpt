@@ -1,5 +1,5 @@
 Restore Archived Project report for lab6_toplevel
-Fri Mar 01 06:17:06 2019
+Wed Mar 06 17:53:07 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Fri Mar 01 06:17:06 2019 ;
+; Restore Archived Project Status ; Successful - Wed Mar 06 17:53:07 2019 ;
 ; Revision Name                   ; lab6_toplevel                         ;
 ; Top-level Entity Name           ; lab6_toplevel                         ;
 ; Family                          ; Cyclone IV E                          ;
@@ -58,7 +58,6 @@ Info: Generated report 'lab6_toplevel.restore.rpt'
 ; qar_info.json           ;
 ; ALU.sv                  ;
 ; HexDriver.sv            ;
-; IR.sv                   ;
 ; ISDU.sv                 ;
 ; Mem2IO.sv               ;
 ; NZP.sv                  ;

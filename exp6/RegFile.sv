@@ -66,7 +66,7 @@ module RegFile( input logic Clk, LD_REG, Reset,
 	always_comb
 	begin
 	if (Reset)
-	begin 
+		begin 
 		
 		case (SR1)
 			3'b000 : SR1_Out = Reg0;
@@ -100,28 +100,29 @@ module RegFile( input logic Clk, LD_REG, Reset,
 		
 	end
 	
-	always_ff @ (posedge Clk)
-    begin
-	 	 if (LD_REG) //notice, this is a sycnrhonous reset, which is recommended on the FPGA
-					R0LD = 0;
-					R1LD = 0;
-					R2LD = 0;
-					R3LD = 0;
-					R4LD = 0;
-					R5LD = 0;
-					R6LD = 0;
-					R7LD = 0;
-			case(DR)
-					3'b000: R0LD <= 1;
-					3'b001: R1LD <= 1;
-					3'b010: R2LD <= 1;
-					3'b011: R3LD <= 1;
-					3'b100: R4LD <= 1;
-					3'b101: R5LD <= 1;
-					3'b110: R6LD <= 1;
-					3'b111: R7LD <= 1;
-				endcase
+	always_comb
+	begin
+		R0LD = 0;
+		R1LD = 0;
+		R2LD = 0;
+		R3LD = 0;
+		R4LD = 0;
+		R5LD = 0;
+		R6LD = 0;
+		R7LD = 0;
 		
-    end
+		case(DR)
+			3'b000: R0LD = LD_REG;
+			3'b001: R1LD = LD_REG;
+			3'b010: R2LD = LD_REG;
+			3'b011: R3LD = LD_REG;
+			3'b100: R4LD = LD_REG;
+			3'b101: R5LD = LD_REG;
+			3'b110: R6LD = LD_REG;
+			3'b111: R7LD = LD_REG;
+		endcase
+	end		
+		
+
 
 endmodule

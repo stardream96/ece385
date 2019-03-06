@@ -55,16 +55,16 @@ logic [15:0] Data_from_SRAM, Data_to_SRAM;
 logic [3:0][3:0] hex_4;
 logic [15:0] PCtemp;
 // For week 1, hexdrivers will display IR. Comment out these in week 2.
-HexDriver hex_driver3 (IR[15:12], HEX3);
-HexDriver hex_driver2 (IR[11:8], HEX2);
-HexDriver hex_driver1 (IR[7:4], HEX1);
-HexDriver hex_driver0 (IR[3:0], HEX0);
+//HexDriver hex_driver3 (IR[15:12], HEX3);
+//HexDriver hex_driver2 (IR[11:8], HEX2);
+//HexDriver hex_driver1 (IR[7:4], HEX1);
+//HexDriver hex_driver0 (IR[3:0], HEX0);
 
 // For week 2, hexdrivers will be mounted to Mem2IO
-// HexDriver hex_driver3 (hex_4[3][3:0], HEX3);
-// HexDriver hex_driver2 (hex_4[2][3:0], HEX2);
-// HexDriver hex_driver1 (hex_4[1][3:0], HEX1);
-// HexDriver hex_driver0 (hex_4[0][3:0], HEX0);
+ HexDriver hex_driver3 (hex_4[3][3:0], HEX3);
+ HexDriver hex_driver2 (hex_4[2][3:0], HEX2);
+ HexDriver hex_driver1 (hex_4[1][3:0], HEX1);
+ HexDriver hex_driver0 (hex_4[0][3:0], HEX0);
 
 // The other hex display will show PC for both weeks.
 HexDriver hex_driver7 (PC[15:12], HEX7);
@@ -79,9 +79,9 @@ assign ADDR = { 4'b00, MAR }; //Note, our external SRAM chip is 1Mx16, but addre
 assign MIO_EN = ~OE;	
 
 logic [15:0] ADDR1_Out, ADDR2_Out;
-logic [15:0] SEXT11,SEXT9,SEXT6;
+logic [15:0] SEXT11,SEXT9,SEXT6,SEXT5;
 logic [15:0] PCALU_Out;
-logic [2:1] SR2_OUT;
+
 // You need to make your own datapath module and connect everything to the datapath
 // Be careful about whether Reset is active high or low
 datapath d0 (.*, .Data_Out(Bus_Data));
@@ -120,10 +120,10 @@ SEXT SEXTunit_ADDR2(
 
 mux_41 ADDR2mux(
 	.SELECT(ADDR2MUX),
-	.IN_00(SEXT11),
-	.IN_01(SEXT9),
-	.IN_10(SEXT6),
-	.IN_11(16'h0000),
+	.IN_00(16'h0000),
+	.IN_01(SEXT6),
+	.IN_10(SEXT9),
+	.IN_11(SEXT11),
 	.Out(ADDR2_Out)
 );
 
@@ -195,8 +195,8 @@ mux3_21 SR1mux(
 			
 mux_21 SR2mux(
 				.SELECT(SR2MUX),
-				.IN_0(SR2_OUT),
-				.IN_1({{11{IR[4]}},IR[4:0]}),
+				.IN_0(SR2_Out),
+				.IN_1(SEXT5),
 				.Data_Out(SR2temp)
 );
 
@@ -210,7 +210,7 @@ RegFile RegisterF(
 				
 ALU alu (
 	.A(SR1_Out),
-	.B(SR2_Out),
+	.B(SR2temp),
 	.Sel(ALUK),
 	.Out(ALU)
 );

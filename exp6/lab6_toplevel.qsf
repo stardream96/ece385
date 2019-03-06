@@ -583,7 +583,6 @@ set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simula
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id testbench
-set_global_assignment -name EDA_TEST_BENCH_FILE testbench.sv -section_id testbench
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity lab4_adders_toplevel -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity lab4_adders_toplevel -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -entity lab4_adders_toplevel -section_id Top
@@ -670,7 +669,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE RegFile.sv
 set_global_assignment -name SYSTEMVERILOG_FILE NZP.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux3_21.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux21.sv
-set_global_assignment -name SYSTEMVERILOG_FILE IR.sv
 set_global_assignment -name SYSTEMVERILOG_FILE datapath.sv
 set_global_assignment -name SYSTEMVERILOG_FILE testbench.sv
 set_global_assignment -name SYSTEMVERILOG_FILE PCmux.sv
@@ -689,4 +687,5 @@ set_global_assignment -name SYSTEMVERILOG_FILE mux_21.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux_41.sv
 set_global_assignment -name SYSTEMVERILOG_FILE SEXT.sv
+set_global_assignment -name EDA_TEST_BENCH_FILE testbench.sv -section_id testbench
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

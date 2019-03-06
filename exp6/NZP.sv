@@ -1,6 +1,6 @@
 module NZP ( 	input logic			 LD_CC, Clk,
 					input logic [15:0] Bus_Data, IR,								
-					output logic[15:0] Data_Out);
+					output logic Data_Out);
 					
 					logic N,Z,P;
 									

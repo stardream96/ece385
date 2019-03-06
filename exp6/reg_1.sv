@@ -7,7 +7,7 @@ module reg_1(input  logic Clk, LD, Reset,
 	 	 if (LD) //notice, this is a sycnrhonous reset, which is recommended on the FPGA
 			  Data_Out <= D;
 		 if(~Reset)
-			  Data_Out <= 16'b0;
+			  Data_Out <= 1'b0;
 
     end
 

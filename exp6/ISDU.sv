@@ -137,16 +137,16 @@ module ISDU (   input logic         Clk,
 					Next_state = PauseIR2;
 				else 
 					Next_state = S_18;
-			Pause : 
-				if (~Continue) 
-					Next_state = Pause;
-				else 
-					Next_state = Pause2;
-			Pause2 : 
-				if (Continue) 
-					Next_state = Pause2;
-				else 
-					Next_state = S_18;
+//			Pause : 
+//				if (~Continue) 
+//					Next_state = Pause;
+//				else 
+//					Next_state = Pause2;
+//			Pause2 : 
+//				if (Continue) 
+//					Next_state = Pause2;
+//				else 
+//					Next_state = S_18;
 			S_00 : //BR
 				if (BEN) 
 					Next_state = S_22;
@@ -214,6 +214,17 @@ module ISDU (   input logic         Clk,
 				Next_state = S_16_2;
 			S_16_2 : //M[MAR]<-MDR
 				Next_state = S_18;
+			S_00 :// [BEN]
+				if (BEN) begin
+					Next_state = S_22;
+				end
+				else begin
+					Next_state = S_18;
+				end
+			S_22 :
+				Next_state = S_18;
+			
+			
 
 
 			// You need to finish the rest of states.....
@@ -228,8 +239,8 @@ module ISDU (   input logic         Clk,
 			S_18 : 
 				begin 
 					GatePC = 1'b1;
-					LD_MAR = 1'b1;
 					PCMUX = 2'b00;
+					LD_MAR = 1'b1;
 					LD_PC = 1'b1;
 				end
 			S_33_1 : 
@@ -244,8 +255,14 @@ module ISDU (   input logic         Clk,
 					GateMDR = 1'b1;
 					LD_IR = 1'b1;
 				end
-			PauseIR1: ;
-			PauseIR2: ;
+			PauseIR1: 
+				begin
+					LD_LED = 1'b1;
+				end
+			PauseIR2: 
+				begin
+					LD_LED = 1'b1;
+				end
 			S_32 : 
 				LD_BEN = 1'b1;
 			S_01 : //ADD
@@ -254,6 +271,9 @@ module ISDU (   input logic         Clk,
 					ALUK = 2'b00;//ALU ADD operation
 					GateALU = 1'b1;//ALU output to bus
 					LD_REG = 1'b1;
+					DRMUX = 1'b0;
+					SR1MUX = 1'b1;
+					LD_CC = 1'b1;
 					// incomplete...
 				end
 			S_05 : //AND DR<-SR1&OP2, set CC
@@ -262,12 +282,18 @@ module ISDU (   input logic         Clk,
 					ALUK = 2'b01;//ALU AND operation
 					GateALU = 1'b1;//ALU output to bus
 					LD_REG = 1'b1;
+					DRMUX = 1'b0;
+					SR1MUX = 1'b1;
+					LD_CC = 1'b1;
 				end
 			S_09 : //NOT
 				begin
 					ALUK = 2'b10;//ALU not A operation
 					GateALU = 1'b1;//ALU output to bus
 					LD_REG = 1'b1;
+					DRMUX = 1'b0;
+					SR1MUX = 1'b1;
+					LD_CC = 1'b1;
 				end
 			S_00 :; //BR;
 //				if IR11
@@ -277,45 +303,45 @@ module ISDU (   input logic         Clk,
 			S_22 : //in BR,PC<-PC+off9
 				begin
 					LD_PC = 1'b1;
-					PCMUX = 2'b10;//pass value from ALU to PC
+					PCMUX = 2'b01;//pass value from ALU to PC
 					ADDR1MUX = 1'b1;	//pass SR1 output to ALU
-					ADDR2MUX = 1'b01;	//pass SEXT IR[8:0] to ALU
+					ADDR2MUX = 1'b10;	//pass SEXT IR[8:0] to ALU
 					
 				end
 			S_12 : //JMP,PC<-R(BaseR)
 				begin
 					LD_PC = 1'b1;
-					PCMUX = 2'b10;//pass value from ALU to PC
+					PCMUX = 2'b01;//pass value from ALU to PC
 					SR1MUX = 1'b1;//pass IR[8:6] into reg file
 					ADDR1MUX = 1'b1;	//pass SR1 output to ALU
-					ADDR2MUX = 2'b10;	//pass SEXT IR[5:0] to ALU
+					ADDR2MUX = 2'b00;	//pass SEXT IR[5:0] to ALU
 					
-					Mem_OE = 1'b1;
-					Mem_WE = 1'b1;
 				end
 			S_04 : //JSR R(7)<-PC
 				begin
 					GatePC = 1'b1;
-					DRMUX = IR_11; //R7 (111)
+					DRMUX = 1'b1; //R7 (111)
 					LD_REG = 1'b1;
 				end
 			S_21 : //in JSR, PC<-PC+off11
 				begin
 					LD_PC = 1'b1;
-					PCMUX = 2'b10;//pass value from ALU to PC
+					PCMUX = 2'b01;//pass value from ALU to PC
 					ADDR1MUX = 1'b0;	//pass PC to ALU
-					ADDR2MUX = 2'b00;	//pass SEXT IR[10:0] to ALU
+					ADDR2MUX = 2'b11;	//pass SEXT IR[10:0] to ALU
 				end
 			S_06 : //LDR MAR<-B+off6
 				begin
 					LD_MAR = 1'b1;
 					GateMARMUX = 1'b1;//pass output from PCALU to bus
-					ADDR2MUX = 2'b10;//pass off6 to PCALU
+					ADDR2MUX = 2'b01;//pass off6 to PCALU
 					ADDR1MUX = 1'b1;//pass BaseR to PCALU
-					//SR1= IR[8:6] by default
+					SR1MUX = 1'b1;//SR1= IR[8:6]
 				end
 			S_25_1 : //LDR MDR<-M[MAR]
-				Mem_OE = 1'b0;
+				begin
+					Mem_OE = 1'b0;
+				end
 			S_25_2 : //LDR MDR<-M[MAR]
 				begin 
 					Mem_OE = 1'b0;
@@ -324,7 +350,7 @@ module ISDU (   input logic         Clk,
 			S_27 : //LDR DR<-MDR, set CC
 				begin
 					GateMDR = 1'b1;
-					DRMUX = 1'b1;
+					DRMUX = 1'b0;
 					LD_CC = 1'b1;
 					LD_REG = 1'b1;
 				end
@@ -332,9 +358,9 @@ module ISDU (   input logic         Clk,
 				begin
 					LD_MAR = 1'b1;
 					GateMARMUX = 1'b1;//pass output from PCALU to bus
-					ADDR2MUX = 2'b10;//pass off6 to PCALU
+					ADDR2MUX = 2'b01;//pass off6 to PCALU
 					ADDR1MUX = 1'b1;//pass BaseR to PCALU
-					//SR1= IR[8:6] by default
+					SR1MUX = 1'b1;//SR1= IR[8:6] by default
 				end
 			S_23 : //STR MDR<-SR
 				begin 
@@ -342,23 +368,22 @@ module ISDU (   input logic         Clk,
 					LD_MDR = 1'b1;
 					GateALU = 1'b1;
 					ALUK = 2'b11;
+					SR1MUX = 1'b0;
 				end
 			S_16_1 : //STR M[MAR]<-MDR
 			begin
-				//Mem_OE = 1'b1; default
+
 				Mem_WE = 1'b0;
 			end
 			S_16_2 : //STR M[MAR]<-MDR
 			begin
-				//Mem_OE = 1'b1; default
+
+				LD_REG = 1'b1;
+				DRMUX  = 1'b0;
 				Mem_WE = 1'b0;
 			end
 
-			default :
-				begin
-					Mem_OE = 1'b1;
-					Mem_WE = 1'b1;
-				end
+
 		endcase
 	end 
 
