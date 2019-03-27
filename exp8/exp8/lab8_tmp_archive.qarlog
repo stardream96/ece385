@@ -1,0 +1,101 @@
+Quartus Prime Archive log --	D:/mine/UIUC/ECE385/Lab8/exp8/lab8_tmp_archive.qarlog
+
+Archive:	D:/mine/UIUC/ECE385/Lab8/exp8/lab8_tmp_archive.qar
+Date:		Fri Mar 15 11:16:45 2019
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/mine/UIUC/ECE385/Lab8/exp8/Color_Mapper.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/HexDriver.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/PLLJ_PLLSPE_INFO.txt
+D:/mine/UIUC/ECE385/Lab8/exp8/VGA_controller.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/__lab7_usb.auto.qarlog
+D:/mine/UIUC/ECE385/Lab8/exp8/ball.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/hpi_io_intf.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/lab7_usb.qsf
+D:/mine/UIUC/ECE385/Lab8/exp8/lab8.qpf
+D:/mine/UIUC/ECE385/Lab8/exp8/lab8.qsf
+D:/mine/UIUC/ECE385/Lab8/exp8/lab8.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/lab8_assignment_defaults.qdf
+D:/mine/UIUC/ECE385/Lab8/exp8/lab8_tmp_archive.qarlog
+D:/mine/UIUC/ECE385/Lab8/exp8/mylog.txt
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system.qsys
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system.sopcinfo
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/nios_system.bsf
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/nios_system.cmp
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/nios_system.html
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/nios_system.xml
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/nios_system_bb.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/nios_system_generation.rpt
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/nios_system_generation_previous.rpt
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/nios_system_inst.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/nios_system_inst.vhd
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/nios_system.debuginfo
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/nios_system.qip
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/nios_system.regmap
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/nios_system.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_avalon_sc_fifo.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_avalon_st_clock_crosser.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.sdc
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_merlin_master_agent.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_merlin_master_translator.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_merlin_slave_agent.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_merlin_slave_translator.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_reset_controller.sdc
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_reset_controller.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_reset_synchronizer.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/altera_std_synchronizer_nocut.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_irq_mapper.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_keycode.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_demux_001.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_cmd_mux_001.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_001.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_002.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_router_003.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_demux_001.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_rsp_mux_001.sv
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_nios2_gen2_0.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.sdc
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_debug_slave_sysclk.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_debug_slave_tck.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_debug_slave_wrapper.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_ociram_default_contents.mif
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_rf_ram_a.mif
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_rf_ram_b.mif
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_nios2_gen2_0_cpu_test_bench.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_onchip_memory2_0.hex
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_onchip_memory2_0.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_otg_hpi_address.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_otg_hpi_cs.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_otg_hpi_data.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_sdram.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_sdram_pll.v
+D:/mine/UIUC/ECE385/Lab8/exp8/nios_system/synthesis/submodules/nios_system_sysid_qsys_0.v
+D:/mine/UIUC/ECE385/Lab8/exp8/vga_clk.ppf
+D:/mine/UIUC/ECE385/Lab8/exp8/vga_clk.qip
+D:/mine/UIUC/ECE385/Lab8/exp8/vga_clk.v
+c:/intelfpga_lite/18.0/quartus/bin64/assignment_defaults.qdf
+	======= Total: 84 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Fri Mar 15 11:16:55 2019
+Source archive file:	D:/mine/UIUC/ECE385/Lab8/exp8/lab8_tmp_archive.qar
+Archive was extracted into	F:/ECE385_ABB_Lab8_Vikram/qianluc2_lchen111/
+		 - successfully.
