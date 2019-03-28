@@ -78,12 +78,52 @@ module  ball ( input         Clk,                // 50 MHz clock
             //   both sides of the operator as UNSIGNED numbers.
             // e.g. Ball_Y_Pos - Ball_Size <= Ball_Y_Min 
             // If Ball_Y_Pos is 0, then Ball_Y_Pos - Ball_Size will not be -4, but rather a large positive number.
-            if( Ball_Y_Pos + Ball_Size >= Ball_Y_Max )  // Ball is at the bottom edge, BOUNCE!
-                Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1);  // 2's complement.  
-            else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size )  // Ball is at the top edge, BOUNCE!
-                Ball_Y_Motion_in = Ball_Y_Step;
-            // TODO: Add other boundary detections and handle keypress here.
+				case (keycode)
+					8'h1A: //W
+						begin
+							Ball_X_Motion_in = 10'd0;
+							Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1);
+						end
+					8'h04: //A
+						begin
+							Ball_X_Motion_in = (~(Ball_X_Step) + 1'b1);
+							Ball_Y_Motion_in = 10'd0;
+						end
+					8'h16: //S
+						begin
+							Ball_X_Motion_in = 10'd0;
+							Ball_Y_Motion_in = Ball_Y_Step;
+						end
+					8'h07: //D
+						begin
+							Ball_X_Motion_in = Ball_X_Step;
+							Ball_Y_Motion_in = 10'd0;
+						end
+					default : ;
+				endcase
         
+            if( Ball_Y_Pos + Ball_Size >= Ball_Y_Max)  // Ball is at the bottom edge, BOUNCE!
+                begin
+						Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1);  // 2's complement. 
+						Ball_X_Motion_in = 10'd0;
+					 end
+            else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size )  // Ball is at the top edge, BOUNCE!
+                begin
+						Ball_Y_Motion_in = Ball_Y_Step;
+						Ball_X_Motion_in = 10'd0;
+					 end
+            // TODO: Add other boundary detections and handle keypress here.
+				if( Ball_X_Pos + Ball_Size >= Ball_X_Max)  // Ball is at the right edge, BOUNCE!
+					begin
+						Ball_X_Motion_in = (~(Ball_X_Step) + 1'b1);  // 2's complement.  
+						Ball_Y_Motion_in = 10'd0;
+					end
+            else if ( Ball_X_Pos <= Ball_X_Min + Ball_Size )  // Ball is at the left edge, BOUNCE!
+					begin
+						Ball_X_Motion_in = Ball_X_Step;
+						Ball_Y_Motion_in = 10'd0;
+					end
+
         
             // Update the ball's position with its motion
             Ball_X_Pos_in = Ball_X_Pos + Ball_X_Motion;
